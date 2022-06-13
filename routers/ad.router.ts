@@ -10,9 +10,8 @@ export const adRouter = Router()
        const ad = await AdRecord.getOne(req.params.id);
        res.json(ad);
     })
-    .post('/:id', async (req, res) => {
+    .post('/', async (req, res) => {
         const ad = new AdRecord(req.body);
         await ad.insert();
         res.json(ad);
-
     });

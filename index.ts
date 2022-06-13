@@ -17,9 +17,6 @@ app.use(rateLimit({
 }));
 
 app.use('/ad', adRouter);
-// app.get('/', async(req, res) => {
-//     throw new Error('Damn!');
-// });
 
 app.use(handleError);
 

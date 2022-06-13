@@ -66,7 +66,7 @@ export class AdRecord implements AdEntity {
         });
     }
 
-   async insert(): Promise<void>{
+   async insert(): Promise<void> {
         if (!this.id) {
             this.id = uuid();
         } else {
