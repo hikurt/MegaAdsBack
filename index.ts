@@ -17,13 +17,14 @@ app.use(rateLimit({
     max: 100, // Limit each IP to 100 requests per `window` (here, per 15 minutes)
 }));
 
-const router = Router();
+// const router = Router();
+//
+// router.use('/offer', adRouter);
+//
+// app.use('/api', router);
 
-router.use('/ad', adRouter);
 
-app.use('/api', router);
-
-// app.use('/ad', adRouter);
+app.use('/offer', adRouter);
 
 app.use(handleError);
 
